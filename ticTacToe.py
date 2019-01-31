@@ -74,7 +74,7 @@ def getHumanMove(slot):
     move = ' '
     
     while move not in '1 2 3 4 5 6 7 8 9'.split() or not isSlotOpen(slot, int(move)):
-        print('What is your next move? (1-9)')
+        print("What's your next move? (1-9)")
         move = input()
         
     return int(move)
@@ -133,7 +133,6 @@ def areSlotsFull(slot):
 print("Let's play Tic Tac Toe!")
     
 while True:
-    # Reset the board
     theSlot = [' '] * 10
     humanChoice, machineChoice = humanChoice()
     turn = whoGoesFirst()
@@ -152,7 +151,7 @@ while True:
             else:
                 if areSlotsFull(theSlot):
                     game(theSlot)
-                    print('The game is a tie!')
+                    print('The game tied.')
                     break
                 else:
                     turn = 'machine'
@@ -166,7 +165,7 @@ while True:
             else:
                 if areSlotsFull(theSlot):
                     game(theSlot)
-                    print('The game is a tie!')
+                    print('The game tied.')
                     break
                 else:
                     turn = 'human'
